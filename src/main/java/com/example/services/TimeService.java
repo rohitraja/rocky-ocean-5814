@@ -7,13 +7,21 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/time")
+@Path("/demo")
 @Produces(MediaType.APPLICATION_JSON)
 public class TimeService {
 
     @GET
+    @Path("/time")
     public Time get() {
         return new Time();
+    }
+    
+    @GET
+    @Path("/test")
+    public String Test()
+    {
+    	return "Hi This is Rohit ";
     }
 
 }
