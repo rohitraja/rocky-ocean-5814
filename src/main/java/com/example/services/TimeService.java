@@ -3,7 +3,10 @@ package com.example.services;
 import com.example.models.Time;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -21,16 +24,15 @@ public class TimeService {
     @Path("/test")
     public String Test()
     {
-    	get();
-    	return "Hi This is Rohit "+Test2();
+    	return "Hi This is Rohit ";
     	
     }
     
-    @GET
-    @Path("/test2")
-    public String Test2()
+    @PUT
+    @Path("/HiThere/{name}")
+    public String HiThere(@PathParam ("name") String name)
     {
-    	return "Hi This is Rohit ";
+    	return "Hi " + name + "This is Rohit ";
     	
     }
     
