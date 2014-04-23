@@ -14,8 +14,7 @@ public class TimeService {
     @GET
     @Path("/time")
     public Time get() {
-    	Time time = new Time();
-        return time;
+        return new Time();
     }
     
     @GET
@@ -23,7 +22,15 @@ public class TimeService {
     public String Test()
     {
     	get();
-    	return "Hi This is Rohit "+ new Time()+ get();
+    	return "Hi This is Rohit "+Test2();
+    	
+    }
+    
+    @GET
+    @Path("/test2")
+    public String Test2()
+    {
+    	return "Hi This is Rohit ";
     	
     }
     
