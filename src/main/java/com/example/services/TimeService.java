@@ -14,7 +14,8 @@ public class TimeService {
     @GET
     @Path("/time")
     public Time get() {
-        return new Time();
+    	Time time = new Time();
+        return time;
     }
     
     @GET
