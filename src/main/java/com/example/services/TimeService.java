@@ -21,8 +21,14 @@ public class TimeService {
     @Path("/test")
     public String Test()
     {
-    	return "Hi This is Rohit ";
+    	get();
+    	return "Hi This is Rohit "+ value();
     	
+    }
+    
+    public String value()
+    {
+    	return "added String";
     }
 
 }
