@@ -22,7 +22,7 @@ public class TimeService {
     public String Test()
     {
     	get();
-    	return "Hi This is Rohit "+ value();
+    	return "Hi This is Rohit "+ value()+get();
     	
     }
     
