@@ -20,6 +20,18 @@ public class TimeService {
         return new Time();
     }
     
+    
+    @GET
+    @Path("/test")
+    @Produces(MediaType.TEXT_HTML)
+
+    public String Test2()
+    {
+    	return "Hi This is Amresh";
+    	
+    }
+    
+    
     @GET
     @Path("/test")
     @Produces(MediaType.APPLICATION_JSON)
@@ -31,15 +43,7 @@ public class TimeService {
     
     
     
-    @GET
-    @Path("/test")
-    @Produces(MediaType.TEXT_HTML)
 
-    public String Test2()
-    {
-    	return "Hi This is Amresh";
-    	
-    }
     
     
     @PUT
