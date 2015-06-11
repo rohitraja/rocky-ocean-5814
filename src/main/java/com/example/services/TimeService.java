@@ -20,10 +20,14 @@ public class TimeService {
         return new Time();
     }
     
-    
+  /*
+   * Test for which mathod is called when the 
+   * url path is same for two different method but same HTTP request(ie GET, POST etc) 
+   * with different MediaType.
+   */
     @GET
     @Path("/test")
-    @Produces(MediaType.TEXT_HTML)
+    @Produces(MediaType.APPLICATION_ATOM_XML)
 
     public String Test2()
     {
@@ -40,7 +44,9 @@ public class TimeService {
     	return "Hi This is Mohit ";
     	
     }
-    
+    /*
+     * Conclusion -> the first Url path will hit. 
+     */
     
     
 
