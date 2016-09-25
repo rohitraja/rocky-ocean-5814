@@ -65,6 +65,14 @@ public class TimeService {
     {
     	return "added String";
     }
+    
+    @POST
+    @Path("/clientTime")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Time returnTime(Time time) {
+        return time;
+    }
 
 }
 
